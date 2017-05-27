@@ -1,39 +1,45 @@
-<!-- views/index.ejs -->
-<!doctype html>
-<html>
-<head>
-    <title>Node Authentication</title>
-</head>
-<body>
-<h1>REGISTER MEAL</h1>
+<% include layout-head %>
+<div class="col-lg-12 col-md-12  text-center">
+    <h2 class="margin-top-0 text-primary">
+        <div class='btn-holder'>
+            <button  class="btn btn-warning" id='btnPrev'>&lt;</button>
+            <span class="text-warning"id='currentDate'></span>
+            <button  class="btn btn-warning" id='btnNext'>&gt;</button>
+        </div>
+    </h2> <br>
+    <div id="Table"></div>
 
-<form action="/mealRegister" method="post" enctype="multipart/form-data">
+</div>
+<!--
+    <form action="/mealRegister" method="post" enctype="multipart/form-data">
     아침 :
     <input type="file" name="morningImage">
-    메뉴 1 : <input type="text" name="morningMenu1">
-    메뉴 2 : <input type="text" name="morningMenu2">
-    메뉴 3 : <input type="text" name="morningMenu3">
-    메뉴 4 : <input type="text" name="morningMenu4">
-    메뉴 5 : <input type="text" name="morningMenu5">
-    메뉴 6 : <input type="text" name="morningSideMenu"> <br>
+    <input type="text" name="morningMenu1">
+    <input type="text" name="morningMenu2">
+    <input type="text" name="morningMenu3">
+    <input type="text" name="morningMenu4">
+    <input type="text" name="morningMenu5">
+    <input type="text" name="morningSideMenu"> <br>
     점심 :
      <input type="file" name="lunchImage">
-    메뉴 1 : <input type="text" name="lunchMenu1">
-    메뉴 2 : <input type="text" name="lunchMenu2">
-    메뉴 3 : <input type="text" name="lunchMenu3">
-    메뉴 4 : <input type="text" name="lunchMenu4">
-    메뉴 5 : <input type="text" name="lunchMenu5">
-    메뉴 6 : <input type="text" name="lunchSideMenu"> <br>
+     <input type="text" name="lunchMenu1">
+     <input type="text" name="lunchMenu2">
+     <input type="text" name="lunchMenu3">
+     <input type="text" name="lunchMenu4">
+     <input type="text" name="lunchMenu5">
+     <input type="text" name="lunchSideMenu"> <br>
     저녁 :
     <input type="file" name="dinnerImage">
-    메뉴 1 : <input type="text" name="dinnerMenu1">
-    메뉴 2 : <input type="text" name="dinnerMenu2">
-    메뉴 3 : <input type="text" name="dinnerMenu3">
-    메뉴 4 :  <input type="text" name="dinnerMenu4">
-    메뉴 5 : <input type="text" name="dinnerMenu5">
-    메뉴 6 : <input type="text" name="dinnerSideMenu"> <br>
+    <input type="text" name="dinnerMenu1">
+    <input type="text" name="dinnerMenu2">
+    <input type="text" name="dinnerMenu3">
+    <input type="text" name="dinnerMenu4">
+    <input type="text" name="dinnerMenu5">
+    <input type="text" name="dinnerSideMenu"> <br>
 
     <button type="submit">등록</button>
 </form>
+-->
+<script src="table_controller.js"></script>
 </body>
 </html>

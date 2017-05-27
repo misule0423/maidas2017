@@ -29,7 +29,9 @@ var userSchema = mongoose.Schema({
         name         : String
     },
 
-    is_admin : { type : Number, default : 0 }
+    is_admin : { type : Number, default : 0 },
+    is_meal:[{type:String,}]
+
 });
 
 // methods ======================

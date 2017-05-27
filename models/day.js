@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var schema = mongoose.Schema;
 
 var daySchema = new schema({
-    date : Date,
+    date : String,
     morning  : {
         imagePath : String,
         mainMenu1 : String,
