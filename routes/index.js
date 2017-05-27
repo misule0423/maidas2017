@@ -1,8 +1,4 @@
 var User = require('../models/user');
-
-var ask=require('../controllers/ask_controller.js');
-var answer=require('../controllers/answer_controller.js');
-
 var express = require('express');
 //var app = express.app();
 var multer = require('multer');
