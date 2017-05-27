@@ -36,7 +36,7 @@ module.exports = function(app,passport){
 	// LOGIN ===============================
 	// =====================================
 	// show the login form
-	app.get('/login', isNotLoggedIn, function(req, res) {
+	app.get('/login', function(req, res) {
 
 		// render the page and pass in any flash data if it exists
 		res.render('login.ejs', { message: req.flash('loginMessage') });
@@ -53,7 +53,7 @@ module.exports = function(app,passport){
 	// SIGNUP ==============================
 	// =====================================
 	// show the signup form
-	app.get('/signup', isNotLoggedIn, function(req, res) {
+	app.get('/signup', function(req, res) {
 
 		// render the page and pass in any flash data if it exists
 		res.render('signup.ejs', { message: req.flash('signupMessage') });
@@ -93,7 +93,7 @@ module.exports = function(app,passport){
 		// console.log(req.user.is_admin);
 
 		if(req.user.is_admin == 1){
-			res.render('mealRegister.ejs');
+			res.render('mealRegister.ejs', {user : req.user});
 		} else{
 			res.redirect('/main');
 		}
@@ -102,6 +102,20 @@ module.exports = function(app,passport){
 
 	app.post('/mealRegister',function (req,res){
 		dayController.saveDay(req,res);
+	});
+
+	app.get('/statistics', isLoggedIn, function (req, res) {
+
+
+		// console.log("hihi");
+		// console.log(req.user.is_admin);
+
+		if(req.user.is_admin == 1){
+			res.render('statistics.ejs', {user : req.user});
+		} else{
+			res.redirect('/main');
+		}
+
 	});
 
 
