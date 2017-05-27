@@ -1,0 +1,77 @@
+<!-- views/profile.ejs -->
+
+<!-- <% if (user.is_admin == 1) { %>
+	<% include layout-navbar %>
+<% } %>
+ -->
+<% include layout-head %>
+<% include layout-navbar %>
+	
+<!-- <div class="container">
+	<div class="page-header text-center">
+		<h1><span class="fa fa-anchor"></span> Profile Page</h1>
+		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="well">
+				<h3><span class="fa fa-user"></span> Local</h3>
+
+					<p>
+						<strong>id</strong>: <%= user._id %><br>
+						<strong>email</strong>: <%= user.local.email %><br>
+						<strong>password</strong>: <%= user.local.password %>
+						
+					</p>
+
+			</div>
+		</div>
+
+	</div>
+
+</div> -->
+
+<section class="bg-primary" id="one">
+<div class="container">
+         <!-- 달력-->
+   <div class="row">
+        <div class="col-lg-6 col-md-7  text-center">
+          <h2 class="margin-top-0 text-primary">
+            <div class='btn-holder'>
+              <button  class="btn btn-warning" id='btnPrev'>&lt;</button>
+              <span class="text-warning"id='currentDate'></span>
+              <button  class="btn btn-warning" id='btnNext'>&gt;</button>
+            </div>
+          </h2> <br>
+          <div id="calendar"></div>
+        </div>
+                 <!-- 식단표 -->
+        <div class="col-lg-6 col-md-5 text-center">
+          <h4 class="margin-top-0 margin-bottom-10">
+            <div class='btn-holder'>
+              <h2 id="detail_calendar" class="margin-top-50 wow fadeIn">그 날의 일정</h2>
+            </div>
+            <div id="dayfood" class="col-md-12" >
+                          <table class="table table-bordered">
+                             </thead>
+                                <tr>
+                                   <th class="text-center breakfirst">조식</th>
+                                   <th class="text-center lunch">점심</th>
+                                   <th class="text-center dinner">석식</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <tr>
+                                   <td id="food" colspan="3">dd</td>
+                                </tr>
+                             </tbody>
+                          </table>
+                       </div>
+           </h4><br>
+         </div>
+    </div>
+</div>
+</section>
+
+<% include layout-foot %>

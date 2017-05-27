@@ -1,0 +1,14 @@
+<nav style="background-color:black; height:80px;">
+	<ul class="header_nav" style="float:left; width: 100%; margin-top: 33px;">
+		<li><a href="/main" style="color:#51cefc">Menu Management</a></li>
+
+    	<% if (user.is_admin == 1) { %>
+      		<li><a href="/mealRegister">admin</a></li>
+		<% } %>
+
+		<li style="float:right"> <a href="/logout">logout</a></li>
+	</ul>
+</nav>
+
+
+

@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var FileStore = require('session-file-store')(session);
-
+var fileUpload = require('express-fileupload');
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //                                      web page server                                       //
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -17,6 +17,7 @@ var dbConfig = require('./config/db.js');
 var mongoose = require('mongoose');
 mongoose.connect(dbConfig.url);
 
+app.use(fileUpload());
 app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.static(path.join(__dirname, 'controllers')));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -36,10 +37,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.locals.pretty=true;
+
 var passport = require('passport');
 var session = require('express-session');
 app.use(session({
-  secret: 'NaverHackday',
+  secret: 'Maidas2017',
   resave: false,
   saveUninitialized: true,
   store:new FileStore()

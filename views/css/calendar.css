@@ -1,0 +1,57 @@
+.wrap {
+   width: 500px;
+   margin: 0 auto;
+}
+.btn-holder {
+   text-align: center;
+   margin: 10px 0 10px 0;
+}
+#calendar table {
+   border-collapse: collapse;
+   text-align: center;
+}
+
+#calendar table td {
+   text-align: center;
+
+}
+
+ .rDate{
+    background-color: hsla(120, 100%, 75%, 0.3);
+ }
+
+ .lastDate{
+
+    background-color: hsla(5, 7%, 80%, 0.3);
+ }
+#calendar table td.sun {
+   color: red;
+}
+#calendar  table td.sat {
+   color: blue;
+}
+
+#scheduleadd{
+margin: 30px 0 10px 0;
+}
+
+#btnPrev{
+  margin: 0 30px 0 0;
+
+}
+#btnNext{
+    margin: 0 0 0 30px;
+}
+#calendarbtn{
+
+
+}
+
+.btn-circle {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 3px 0;
+  font-size: 6px;
+  line-height: 1.428571429;
+  border-radius: 7.5px;

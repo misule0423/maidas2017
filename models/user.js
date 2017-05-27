@@ -27,8 +27,9 @@ var userSchema = mongoose.Schema({
         token        : String,
         email        : String,
         name         : String
-    }
+    },
 
+    is_admin : { type : Number, default : 0 }
 });
 
 // methods ======================

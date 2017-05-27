@@ -1,0 +1,39 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+</head>
+<body>
+<h1>REGISTER MEAL</h1>
+
+<form action="/mealRegister" method="post" enctype="multipart/form-data">
+    아침 :
+    <input type="file" name="morningImage">
+    메뉴 1 : <input type="text" name="morningMenu1">
+    메뉴 2 : <input type="text" name="morningMenu2">
+    메뉴 3 : <input type="text" name="morningMenu3">
+    메뉴 4 : <input type="text" name="morningMenu4">
+    메뉴 5 : <input type="text" name="morningMenu5">
+    메뉴 6 : <input type="text" name="morningSideMenu"> <br>
+    점심 :
+     <input type="file" name="lunchImage">
+    메뉴 1 : <input type="text" name="lunchMenu1">
+    메뉴 2 : <input type="text" name="lunchMenu2">
+    메뉴 3 : <input type="text" name="lunchMenu3">
+    메뉴 4 : <input type="text" name="lunchMenu4">
+    메뉴 5 : <input type="text" name="lunchMenu5">
+    메뉴 6 : <input type="text" name="lunchSideMenu"> <br>
+    저녁 :
+    <input type="file" name="dinnerImage">
+    메뉴 1 : <input type="text" name="dinnerMenu1">
+    메뉴 2 : <input type="text" name="dinnerMenu2">
+    메뉴 3 : <input type="text" name="dinnerMenu3">
+    메뉴 4 :  <input type="text" name="dinnerMenu4">
+    메뉴 5 : <input type="text" name="dinnerMenu5">
+    메뉴 6 : <input type="text" name="dinnerSideMenu"> <br>
+
+    <button type="submit">등록</button>
+</form>
+</body>
+</html>
